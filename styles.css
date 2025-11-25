@@ -1,0 +1,41 @@
+body {
+    background-color: purple;
+}
+
+.calculadora {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: minmax(200px, auto) repeat (6, 200px);
+}
+
+.calculadora > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.calculadora > button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.output {
+    grid-column: 1 / 5;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.output > input {
+    min-width: 100vh;
+    color: black;
+    font-size: 1.85rem;
+    text-align: right;
+}
